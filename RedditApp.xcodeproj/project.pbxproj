@@ -34,6 +34,15 @@
 		CB9569A7CCDAD7504F4F0358 /* TestInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966269177977A28051226AD /* TestInjector.swift */; };
 		D83D1F9C2572F1EA006B7A21 /* PostEntity+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D1F9B2572F1EA006B7A21 /* PostEntity+Mapping.swift */; };
 		D83D1FB62572F6DF006B7A21 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D1FB52572F6DF006B7A21 /* DataError.swift */; };
+		D83D1FC72572FB75006B7A21 /* NetworkPostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D1FC62572FB75006B7A21 /* NetworkPostProvider.swift */; };
+		D83D1FCE2572FBC6006B7A21 /* PlistEndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D1FCD2572FBC6006B7A21 /* PlistEndpointProvider.swift */; };
+		D83D1FD52572FBDE006B7A21 /* EndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D1FD42572FBDE006B7A21 /* EndpointProvider.swift */; };
+		D83D1FDC2572FC09006B7A21 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D1FDB2572FC09006B7A21 /* Endpoint.swift */; };
+		D83D1FEE2572FE29006B7A21 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D1FED2572FE29006B7A21 /* RequestProvider.swift */; };
+		D83D20012572FEC2006B7A21 /* NetworkRequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D20002572FEC2006B7A21 /* NetworkRequestProvider.swift */; };
+		D83D200B257305E7006B7A21 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D200A257305E7006B7A21 /* PostViewController.swift */; };
+		D83D20172573084E006B7A21 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D20162573084E006B7A21 /* PostData.swift */; };
+		D83D20232573086E006B7A21 /* PostChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83D20222573086E006B7A21 /* PostChild.swift */; };
 		D8CE047B2572D5BC00049B7F /* OfflinePostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE047A2572D5BC00049B7F /* OfflinePostProvider.swift */; };
 		D8CE04832572D61B00049B7F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE04822572D61B00049B7F /* Post.swift */; };
 		D8CE048F2572D9C600049B7F /* CoreDataPostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8CE048E2572D9C600049B7F /* CoreDataPostProvider.swift */; };
@@ -211,6 +220,16 @@
 		A1B89F34601170681B7429B1 /* UnitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83D1F9B2572F1EA006B7A21 /* PostEntity+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostEntity+Mapping.swift"; sourceTree = "<group>"; };
 		D83D1FB52572F6DF006B7A21 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		D83D1FC62572FB75006B7A21 /* NetworkPostProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPostProvider.swift; sourceTree = "<group>"; };
+		D83D1FCD2572FBC6006B7A21 /* PlistEndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistEndpointProvider.swift; sourceTree = "<group>"; };
+		D83D1FD42572FBDE006B7A21 /* EndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProvider.swift; sourceTree = "<group>"; };
+		D83D1FDB2572FC09006B7A21 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		D83D1FE72572FC60006B7A21 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Endpoints.plist; sourceTree = "<group>"; };
+		D83D1FED2572FE29006B7A21 /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
+		D83D20002572FEC2006B7A21 /* NetworkRequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProvider.swift; sourceTree = "<group>"; };
+		D83D200A257305E7006B7A21 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		D83D20162573084E006B7A21 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		D83D20222573086E006B7A21 /* PostChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostChild.swift; sourceTree = "<group>"; };
 		D8CE047A2572D5BC00049B7F /* OfflinePostProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflinePostProvider.swift; sourceTree = "<group>"; };
 		D8CE04822572D61B00049B7F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		D8CE048E2572D9C600049B7F /* CoreDataPostProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPostProvider.swift; sourceTree = "<group>"; };
@@ -323,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				4C7CC46D916A88E83B3A8D09 /* Info.plist */,
+				D83D200A257305E7006B7A21 /* PostViewController.swift */,
 			);
 			path = PostUI;
 			sourceTree = "<group>";
@@ -373,6 +393,10 @@
 			isa = PBXGroup;
 			children = (
 				7F6FE10F694A83048B86698D /* Info.plist */,
+				D83D1FC62572FB75006B7A21 /* NetworkPostProvider.swift */,
+				D83D1FCD2572FBC6006B7A21 /* PlistEndpointProvider.swift */,
+				D83D1FE72572FC60006B7A21 /* Endpoints.plist */,
+				D83D20002572FEC2006B7A21 /* NetworkRequestProvider.swift */,
 			);
 			path = Cloud;
 			sourceTree = "<group>";
@@ -385,6 +409,14 @@
 			path = Errors;
 			sourceTree = "<group>";
 		};
+		D83D203025730DFA006B7A21 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				D83D1FDB2572FC09006B7A21 /* Endpoint.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		D8CE04792572D5AF00049B7F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,6 +424,8 @@
 				D8CE047A2572D5BC00049B7F /* OfflinePostProvider.swift */,
 				D8CE04AE2572E15E00049B7F /* OnlinePostProvider.swift */,
 				D8CE04C02572E33300049B7F /* PostProvider.swift */,
+				D83D1FD42572FBDE006B7A21 /* EndpointProvider.swift */,
+				D83D1FED2572FE29006B7A21 /* RequestProvider.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -399,6 +433,9 @@
 		D8CE04812572D61200049B7F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D83D203025730DFA006B7A21 /* Enums */,
+				D83D20162573084E006B7A21 /* PostData.swift */,
+				D83D20222573086E006B7A21 /* PostChild.swift */,
 				D8CE04822572D61B00049B7F /* Post.swift */,
 			);
 			path = Models;
@@ -572,6 +609,12 @@
 					0A1DEC6C88D0E346607CF320 = {
 						TestTargetID = F93BCBE3F7ADD94DDA690E37;
 					};
+					21F9FA898614DB4EA6C36B0B = {
+						LastSwiftMigration = 1210;
+					};
+					584560686CCAA43E5878E330 = {
+						LastSwiftMigration = 1210;
+					};
 					EB365441A5614B121C31A9E8 = {
 						LastSwiftMigration = 1210;
 					};
@@ -619,6 +662,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83D1FCE2572FBC6006B7A21 /* PlistEndpointProvider.swift in Sources */,
+				D83D1FC72572FB75006B7A21 /* NetworkPostProvider.swift in Sources */,
+				D83D20012572FEC2006B7A21 /* NetworkRequestProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,13 +672,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83D20232573086E006B7A21 /* PostChild.swift in Sources */,
 				D8CE04AF2572E15E00049B7F /* OnlinePostProvider.swift in Sources */,
 				D8CE049B2572DC8E00049B7F /* Dependency.swift in Sources */,
 				D8CE04C12572E33300049B7F /* PostProvider.swift in Sources */,
 				D8CE04C82572E36E00049B7F /* DefaultPostProvider.swift in Sources */,
 				D83D1FB62572F6DF006B7A21 /* DataError.swift in Sources */,
+				D83D1FD52572FBDE006B7A21 /* EndpointProvider.swift in Sources */,
+				D83D1FEE2572FE29006B7A21 /* RequestProvider.swift in Sources */,
 				D8CE047B2572D5BC00049B7F /* OfflinePostProvider.swift in Sources */,
 				D8CE04832572D61B00049B7F /* Post.swift in Sources */,
+				D83D20172573084E006B7A21 /* PostData.swift in Sources */,
+				D83D1FDC2572FC09006B7A21 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83D200B257305E7006B7A21 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -797,6 +849,7 @@
 		0BE34F04A5F4D298368AD864 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -812,6 +865,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fernandodelrio.PostUI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -904,6 +959,7 @@
 		7D323064D7AEEA4F0FEF759C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -919,6 +975,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fernandodelrio.Cloud;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -990,6 +1047,7 @@
 		894102A910362ACF292B2C6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1005,6 +1063,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fernandodelrio.Cloud;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1171,6 +1231,7 @@
 		FA6CD0FBA8F1AEC84C8DB351 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1186,6 +1247,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fernandodelrio.PostUI;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};

@@ -24,6 +24,7 @@ public class DefaultPostProvider: PostProvider {
                     self?.fetchOnlinePosts()
                 } else {
                     self?.lastPost = posts.last
+                    self?.postPublisher.send(posts)
                 }
             }
             .store(in: &disposeBag)
@@ -41,7 +42,6 @@ public class DefaultPostProvider: PostProvider {
     private func fetchOnlinePosts() {
         onlineProvider
             .fetchPosts(afterPost: lastPost)
-            .retry(3)
             .flatMap { [weak self] posts in
                 self?.offlineProvider.createPosts(posts: posts) ?? Just(()).eraseToAnyPublisher()
             }
