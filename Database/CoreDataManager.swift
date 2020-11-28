@@ -1,5 +1,5 @@
 //
-//  CoreDataProvider.swift
+//  CoreDataManager.swift
 //  Database
 //
 //  Created by Fernando Henrique Bonfim Moreno Del Rio on 11/28/20.
@@ -9,7 +9,7 @@ import Combine
 import CoreData
 import UIKit
 
-public class CoreDataProvider {
+class CoreDataManager {
     private static var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "RedditApp")
         // Saving the context only when necessary
@@ -31,7 +31,7 @@ public class CoreDataProvider {
         return container
     }()
     private static var disposeBag = Set<AnyCancellable>()
-    internal static var context = persistentContainer.newBackgroundContext()
+    static var context = persistentContainer.newBackgroundContext()
 
     @objc private static func saveContext() {
         context.perform {
