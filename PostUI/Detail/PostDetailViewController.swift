@@ -35,6 +35,9 @@ public class PostDetailViewController: UIViewController {
 
     private func setupView() {
         imageView?.isHidden = true
+        view.backgroundColor = .mainBackgroundColor
+        authorLabel?.textColor = .mainTextColor
+        titleLabel?.textColor = .mainTextColor
     }
 
     private func setupBindings() {

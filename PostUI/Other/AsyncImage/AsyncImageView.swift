@@ -22,6 +22,8 @@ public class AsyncImageView: UIView {
 
     public override func awakeFromNib() {
         super.awakeFromNib()
+        backgroundColor = .mainBackgroundColor
+        imageView.backgroundColor = .mainBackgroundColor
         setupShadow()
         setupImageViewConstraints()
     }

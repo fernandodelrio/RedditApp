@@ -34,6 +34,8 @@ public class PostListViewController: UIViewController {
     private func setupView() {
         navigationItem.title = NSLocalizedString("Reddit Posts", comment: "")
         dismissAllButton?.setTitle(NSLocalizedString("Dismiss All", comment: ""), for: .normal)
+        view.backgroundColor = .mainBackgroundColor
+        dismissAllButton?.tintColor = .mainColor
         tableView?.isHidden = true
         bottomLoadingView?.isHidden = true
         dismissAllButton?.isHidden = true

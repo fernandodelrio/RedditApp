@@ -21,6 +21,7 @@ class ImageViewerViewController: UIViewController {
     }
 
     private func setupView() {
+        view.backgroundColor = .mainBackgroundColor
         asyncImageView?.imageView.contentMode = .scaleAspectFit
     }
 

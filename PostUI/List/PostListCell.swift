@@ -5,6 +5,7 @@
 //  Created by Fernando Henrique Bonfim Moreno Del Rio on 11/28/20.
 //
 
+import Core
 import UIKit
 
 class PostListCell: UITableViewCell {
@@ -26,6 +27,14 @@ class PostListCell: UITableViewCell {
     private func setupView() {
         indicatorView?.layer.cornerRadius = (indicatorSize?.constant ?? 0) / 2
         dismissButton?.setTitle(NSLocalizedString("Dismiss Post", comment: ""), for: .normal)
+        backgroundColor = .mainBackgroundColor
+        indicatorView?.backgroundColor = .indicatorColor
+        authorLabel?.textColor = .mainTextColor
+        timeLabel?.textColor = .mainTextColor
+        titleLabel?.textColor = .mainTextColor
+        dismissButton?.setTitleColor(.mainTextColor, for: .normal)
+        dismissButton?.tintColor = .mainColor
+        commentsLabel?.textColor = .mainColor
     }
 
     @IBAction func didTapDismiss() {

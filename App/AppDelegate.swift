@@ -13,6 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     lazy var injector = Injector()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        UINavigationBar.appearance().tintColor = .mainTextColor
         // Injecting the app dependencies
         injector.load()
         return true
