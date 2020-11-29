@@ -55,7 +55,6 @@ public class CoreDataPostProvider: OfflinePostProvider {
                 let newPosts = posts
                     .filter { !existingIdentifiers.contains($0.identifier) }
                 let newPostsWithOrder = self?.definePostsOrder(posts: newPosts, isRecent: isRecent) ?? []
-                newPostsWithOrder.forEach { print("### \($0.title) \($0.order)") }
                 guard let context = self?.context else { return }
                 _ = newPostsWithOrder.map { PostEntity(post: $0, context: context) }
             }

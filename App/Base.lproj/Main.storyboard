@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="240" estimatedRowHeight="240" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O6Z-ab-wu8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="723"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="655"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PostListCell" rowHeight="240" id="13o-WV-XRG" customClass="PostListCell" customModule="PostUI">
@@ -148,19 +148,37 @@
                                 </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UQj-4D-sGZ">
-                                <rect key="frame" x="0.0" y="811" width="414" height="85"/>
+                                <rect key="frame" x="0.0" y="743" width="414" height="119"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTz-a9-btY">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvy-VU-cK9">
+                                                <rect key="frame" x="184" y="8" width="46" height="34"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="didTapDismissAll" destination="BYZ-38-t0r" eventType="touchUpInside" id="OoM-em-ERa"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="tvy-VU-cK9" secondAttribute="bottom" constant="8" id="8II-0H-xOE"/>
+                                            <constraint firstItem="tvy-VU-cK9" firstAttribute="centerX" secondItem="MTz-a9-btY" secondAttribute="centerX" id="br8-5v-Jtm"/>
+                                            <constraint firstItem="tvy-VU-cK9" firstAttribute="top" secondItem="MTz-a9-btY" secondAttribute="top" constant="8" id="jXY-G7-pYD"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cg5-0F-vws">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                        <rect key="frame" x="0.0" y="50" width="414" height="69"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="axt-b4-QrL">
-                                                <rect key="frame" x="188.5" y="16" width="37" height="37"/>
+                                                <rect key="frame" x="188.5" y="8" width="37" height="53"/>
                                             </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="axt-b4-QrL" firstAttribute="top" secondItem="Cg5-0F-vws" secondAttribute="top" constant="16" id="CW7-bf-lGL"/>
-                                            <constraint firstAttribute="bottom" secondItem="axt-b4-QrL" secondAttribute="bottom" constant="32" id="i6p-Zw-Aeo"/>
+                                            <constraint firstItem="axt-b4-QrL" firstAttribute="top" secondItem="Cg5-0F-vws" secondAttribute="top" constant="8" id="CW7-bf-lGL"/>
+                                            <constraint firstAttribute="bottom" secondItem="axt-b4-QrL" secondAttribute="bottom" constant="8" id="i6p-Zw-Aeo"/>
                                             <constraint firstItem="axt-b4-QrL" firstAttribute="centerX" secondItem="Cg5-0F-vws" secondAttribute="centerX" id="k4M-ky-KLU"/>
                                         </constraints>
                                     </view>
@@ -175,13 +193,14 @@
                             <constraint firstItem="O6Z-ab-wu8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9ca-2z-xqr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UQj-4D-sGZ" secondAttribute="trailing" id="WJ7-pW-Aos"/>
                             <constraint firstItem="O6Z-ab-wu8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WZO-3k-Tkx"/>
-                            <constraint firstAttribute="bottom" secondItem="UQj-4D-sGZ" secondAttribute="bottom" id="l7k-Jp-QoC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UQj-4D-sGZ" secondAttribute="bottom" id="l7k-Jp-QoC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O6Z-ab-wu8" secondAttribute="trailing" id="u9H-x1-JBi"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cau-1S-Sg6"/>
                     <connections>
                         <outlet property="bottomLoadingView" destination="Cg5-0F-vws" id="RbR-yJ-9Aq"/>
+                        <outlet property="dismissAllButton" destination="tvy-VU-cK9" id="BdM-mj-Zbk"/>
                         <outlet property="tableView" destination="O6Z-ab-wu8" id="Rxa-gN-Nl7"/>
                     </connections>
                 </viewController>

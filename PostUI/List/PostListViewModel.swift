@@ -20,6 +20,7 @@ class PostListViewModel {
     private var disposeBag = Set<AnyCancellable>()
     private var unfilteredPosts: [Post] = []
     var isRefreshingData = false
+    var isInitialLoading = true
     var reloadPublisher = PassthroughSubject<Void, Never>()
     var loadingStatePublisher = PassthroughSubject<LoadingState, Never>()
     var posts: [Post] = []
@@ -37,8 +38,7 @@ class PostListViewModel {
             .networkActivityPublisher
             .sink { [weak self] isDoingNetworkActivity in
                 guard let self = self else { return }
-
-                if isDoingNetworkActivity && self.posts.isEmpty {
+                if isDoingNetworkActivity && self.isInitialLoading {
                     self.loadingStatePublisher.send(.showMiddleLoading)
                 } else if isDoingNetworkActivity && self.isRefreshingData {
                     self.loadingStatePublisher.send(.showTopLoading)
@@ -47,6 +47,7 @@ class PostListViewModel {
                 } else {
                     self.loadingStatePublisher.send(.hideLoading)
                 }
+                self.isInitialLoading = false
                 self.isRefreshingData = false
             }
             .store(in: &disposeBag)
@@ -56,13 +57,25 @@ class PostListViewModel {
         postProvider.loadMore()
     }
 
-    func dismiss(index: Int) {
-        let post = posts[index]
+    func dismiss(identifier: String) {
+        guard let post = posts.first(where: { $0.identifier == identifier}) else {
+            return
+        }
         let unfilteredIndex = unfilteredPosts.firstIndex { $0.identifier == post.identifier } ?? 0
         unfilteredPosts[unfilteredIndex].isDismissed = true
         updatePosts()
         postProvider
             .updatePosts(posts: [post])
+            .sink { _ in }
+            .store(in: &disposeBag)
+    }
+
+    func dismissAll() {
+        (0..<unfilteredPosts.count)
+            .forEach { unfilteredPosts[$0].isDismissed = true }
+        updatePosts()
+        postProvider
+            .updatePosts(posts: unfilteredPosts)
             .sink { _ in }
             .store(in: &disposeBag)
     }
