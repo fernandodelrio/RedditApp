@@ -24,6 +24,15 @@ public class PostDetailViewController: UIViewController {
         viewModel.load()
     }
 
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? ImageViewerViewController
+        destination?.viewModel.imageURL = viewModel.post?.fullSizeImageURL ?? ""
+    }
+
+    @IBAction private func didTapImageView(_ sender: Any) {
+        performSegue(withIdentifier: "detailToImageSegue", sender: nil)
+    }
+
     private func setupView() {
         imageView?.isHidden = true
     }

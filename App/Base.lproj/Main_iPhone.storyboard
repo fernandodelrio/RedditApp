@@ -229,10 +229,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Llg-eR-FNk" customClass="AsyncImageView" customModule="PostUI">
                                         <rect key="frame" x="121" y="36.5" width="140" height="140"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="140" id="egf-Ap-tVi"/>
                                             <constraint firstAttribute="width" constant="140" id="h70-Li-zb9"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Hm0-Ec-CEk" appends="YES" id="bLo-M3-RQT"/>
+                                        </connections>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15b-P3-NXa">
                                         <rect key="frame" x="170.5" y="192.5" width="41.5" height="20.5"/>
@@ -255,13 +259,50 @@
                     <navigationItem key="navigationItem" id="csz-7p-jse"/>
                     <connections>
                         <outlet property="authorLabel" destination="6HU-B1-f9o" id="cfN-O8-tmo"/>
-                        <outlet property="imageView" destination="Llg-eR-FNk" id="mBB-ph-aLS"/>
+                        <outlet property="imageView" destination="Llg-eR-FNk" id="aD7-Ca-vKH"/>
                         <outlet property="titleLabel" destination="15b-P3-NXa" id="JJb-gE-Fgw"/>
+                        <segue destination="fIe-lx-Mgn" kind="presentation" identifier="detailToImageSegue" id="9h6-2B-rMv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pwA-Ac-e3D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Hm0-Ec-CEk">
+                    <connections>
+                        <action selector="didTapImageView:" destination="6bQ-cx-HxD" id="Q0x-LH-x65"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2011.594202898551" y="37.5"/>
+        </scene>
+        <!--Image Viewer View Controller-->
+        <scene sceneID="rwc-4Q-bqC">
+            <objects>
+                <viewController id="fIe-lx-Mgn" customClass="ImageViewerViewController" customModule="PostUI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sN4-gL-kzs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5k-ea-3wX" customClass="AsyncImageView" customModule="PostUI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r26-jn-xEd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S5k-ea-3wX" firstAttribute="leading" secondItem="r26-jn-xEd" secondAttribute="leading" id="0s3-RO-iBx"/>
+                            <constraint firstItem="S5k-ea-3wX" firstAttribute="top" secondItem="r26-jn-xEd" secondAttribute="top" id="D5A-kb-2Xh"/>
+                            <constraint firstItem="r26-jn-xEd" firstAttribute="bottom" secondItem="S5k-ea-3wX" secondAttribute="bottom" id="Ep4-3u-zCg"/>
+                            <constraint firstItem="r26-jn-xEd" firstAttribute="trailing" secondItem="S5k-ea-3wX" secondAttribute="trailing" id="b8L-3P-lQl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2E1-af-6Hr"/>
+                    <connections>
+                        <outlet property="asyncImageView" destination="S5k-ea-3wX" id="uzP-Q3-Nmw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uq0-AA-9zJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2859" y="38"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rMx-QO-9XJ">

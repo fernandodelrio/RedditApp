@@ -9,7 +9,7 @@ import Combine
 import UIKit
 
 public class AsyncImageView: UIView {
-    private lazy var imageView: UIImageView = {
+    public lazy var imageView: UIImageView = {
         let view = UIImageView()
         view.layer.cornerRadius = 10.0
         view.contentMode = .scaleAspectFill
