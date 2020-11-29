@@ -24,6 +24,13 @@ public class PostListViewController: UIViewController {
         viewModel.load()
     }
 
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let selectedIndexPath = sender as? IndexPath {
+            let destination = segue.destination as? PostDetailViewController
+            destination?.viewModel.post = viewModel.posts[selectedIndexPath.row]
+        }
+    }
+
     private func setupView() {
         navigationItem.title = NSLocalizedString("Reddit Posts", comment: "")
         dismissAllButton?.setTitle(NSLocalizedString("Dismiss All", comment: ""), for: .normal)
@@ -119,5 +126,13 @@ extension PostListViewController: UITableViewDelegate {
         if indexPath.row + 1 == viewModel.posts.count {
             viewModel.load()
         }
+    }
+
+    public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.select(index: indexPath.row)
+        tableView.beginUpdates()
+        tableView.reloadRows(at: [indexPath], with: .automatic)
+        tableView.endUpdates()
+        performSegue(withIdentifier: "postListToDetailSegue", sender: indexPath)
     }
 }

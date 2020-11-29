@@ -80,6 +80,17 @@ class PostListViewModel {
             .store(in: &disposeBag)
     }
 
+    func select(index: Int) {
+        let post = posts[index]
+        let unfilteredIndex = unfilteredPosts.firstIndex { $0.identifier == post.identifier } ?? 0
+        unfilteredPosts[unfilteredIndex].isUnread = false
+        updatePosts()
+        postProvider
+            .updatePosts(posts: [post])
+            .sink { _ in }
+            .store(in: &disposeBag)
+    }
+
     func refresh() {
         isRefreshingData = true
         postProvider.refresh()

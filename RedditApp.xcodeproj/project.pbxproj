@@ -50,6 +50,8 @@
 		C5DEF65807C7AA8285DAFDB6 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93495981B333B601F96CB439 /* PostData.swift */; };
 		C89BA1A07F04B998A30B6AE4 /* RequestProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92D8767D3DB932047D4AD80 /* RequestProvider.swift */; };
 		CB9569A7CCDAD7504F4F0358 /* TestInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966269177977A28051226AD /* TestInjector.swift */; };
+		D81F72AB2574340F00BCB7B1 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F72AA2574340F00BCB7B1 /* PostDetailViewController.swift */; };
+		D81F72B22574343200BCB7B1 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F72B12574343200BCB7B1 /* PostDetailViewModel.swift */; };
 		D8888BDF25732042000B0666 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8888BDE25732042000B0666 /* PostResult.swift */; };
 		D8888BEC257322D5000B0666 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8888BEB257322D5000B0666 /* PostListViewModel.swift */; };
 		D8F8AB0625732721007253B9 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8AB0525732721007253B9 /* PostListCell.swift */; };
@@ -247,6 +249,8 @@
 		A92D8767D3DB932047D4AD80 /* RequestProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestProvider.swift; sourceTree = "<group>"; };
 		C674567CF262C13271629416 /* PlistEndpointProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistEndpointProvider.swift; sourceTree = "<group>"; };
 		CEA612BAB3FF9F9B20F7654B /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		D81F72AA2574340F00BCB7B1 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		D81F72B12574343200BCB7B1 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
 		D8888BDE25732042000B0666 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
 		D8888BEB257322D5000B0666 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		D8F8AB0525732721007253B9 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 		5D896B94FDDF606B06FB2AC9 /* PostUI */ = {
 			isa = PBXGroup;
 			children = (
+				D81F72A9257433F800BCB7B1 /* Detail */,
 				D8F8AB0C25733A96007253B9 /* Extensions */,
 				D8F8AB4225734172007253B9 /* Other */,
 				D8888BEA257322C5000B0666 /* List */,
@@ -481,6 +486,15 @@
 				D8F8AB2D25733F9C007253B9 /* NSImageCacheProvider.swift */,
 			);
 			path = Cloud;
+			sourceTree = "<group>";
+		};
+		D81F72A9257433F800BCB7B1 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D81F72AA2574340F00BCB7B1 /* PostDetailViewController.swift */,
+				D81F72B12574343200BCB7B1 /* PostDetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		D8888BEA257322C5000B0666 /* List */ = {
@@ -748,6 +762,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8F8AB0625732721007253B9 /* PostListCell.swift in Sources */,
+				D81F72B22574343200BCB7B1 /* PostDetailViewModel.swift in Sources */,
+				D81F72AB2574340F00BCB7B1 /* PostDetailViewController.swift in Sources */,
 				D8F8AB5925734269007253B9 /* UIView+Loading.swift in Sources */,
 				D8888BEC257322D5000B0666 /* PostListViewModel.swift in Sources */,
 				D8F8AB6025734295007253B9 /* AsyncImageViewModel.swift in Sources */,
