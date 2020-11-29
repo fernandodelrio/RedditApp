@@ -11,7 +11,13 @@ import UIKit
 
 class CoreDataManager {
     private static var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "RedditApp")
+        let bundle = Bundle(for: CoreDataManager.self)
+        guard let url = bundle.url(forResource: "RedditApp", withExtension:"momd"),
+            let model = NSManagedObjectModel(contentsOf: url) else {
+            fatalError("Couldn't retrieve core data stack")
+        }
+
+        let container = NSPersistentContainer(name: "RedditApp", managedObjectModel: model)
         // Saving the context only when necessary
         let didEnterBackground = NotificationCenter.default.publisher(
             for: UIApplication.didEnterBackgroundNotification

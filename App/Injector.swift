@@ -17,6 +17,10 @@ class Injector {
         }
 
         // Cloud
+        Dependency.register(ImageCacheProvider.self) {
+            NSImageCacheProvider()
+        }
+
         Dependency.register(OnlinePostProvider.self) {
             NetworkPostProvider()
         }

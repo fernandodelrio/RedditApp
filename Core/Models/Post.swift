@@ -26,13 +26,21 @@ public struct Post: Decodable {
     public var isUnread: Bool
     public var numberOfComments: Int
     public var redditUUID: String
+    public var relativeEntryDateText: String {
+        formatter.localizedString(for: entryDate, relativeTo: Date())
+    }
+    private var formatter: RelativeDateTimeFormatter = {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        return formatter
+    }()
 
     public init() {
         identifier = UUID()
         title = ""
         author = ""
         entryDate = Date()
-        isUnread = false
+        isUnread = true
         numberOfComments = 0
         redditUUID = ""
     }
@@ -40,7 +48,7 @@ public struct Post: Decodable {
     public init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         title = try values.decode(String.self, forKey: .title)
-        author = try values.decode(String.self, forKey: .title)
+        author = try values.decode(String.self, forKey: .author)
         let timestamp = try values.decode(Int.self, forKey: .entryDate)
         entryDate = Date(timeIntervalSince1970: Double(timestamp))
         fullSizeImageURL = try values.decode(String?.self, forKey: .fullSizeImageURL)
@@ -48,6 +56,6 @@ public struct Post: Decodable {
         numberOfComments = try values.decode(Int.self, forKey: .numberOfComments)
         redditUUID = try values.decode(String.self, forKey: .redditUUID)
         identifier = UUID()
-        isUnread = false
+        isUnread = true
     }
 }

@@ -26,8 +26,8 @@ public class NetworkPostProvider: OnlinePostProvider {
             )
         }
         return requestPublisher
-            .decode(type: PostData.self, decoder: JSONDecoder())
-            .map { $0.children.map { $0.post } }
+            .decode(type: PostResult.self, decoder: JSONDecoder())
+            .map { $0.data.children.map { $0.post } }
             .mapError { _ in DataError.failedToRetrieveData }
             .eraseToAnyPublisher()
     }
