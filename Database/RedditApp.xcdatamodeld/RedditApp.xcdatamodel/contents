@@ -4,14 +4,15 @@
         <attribute name="author" optional="YES" attributeType="String"/>
         <attribute name="entryDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="fullSizeImageURL" optional="YES" attributeType="String"/>
-        <attribute name="identifier" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="identifier" optional="YES" attributeType="String"/>
+        <attribute name="isDismissed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isUnread" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="numberOfComments" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="redditUUID" optional="YES" attributeType="String"/>
+        <attribute name="order" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="thumbnailURL" optional="YES" attributeType="String"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="PostEntity" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="PostEntity" positionX="-63" positionY="-18" width="128" height="193"/>
     </elements>
 </model>

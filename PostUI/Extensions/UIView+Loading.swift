@@ -12,7 +12,7 @@ public extension UIView {
     func showLoading() {
         hideLoading()
         let activityIndicator = UIActivityIndicatorView()
-        activityIndicator.style = .medium
+        activityIndicator.style = .large
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false

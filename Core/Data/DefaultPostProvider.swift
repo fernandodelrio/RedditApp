@@ -10,6 +10,7 @@ import Foundation
 
 public class DefaultPostProvider: PostProvider {
     public lazy var postPublisher = PassthroughSubject<[Post], Never>()
+    public lazy var networkActivityPublisher = PassthroughSubject<Bool, Never>()
     private lazy var offlineProvider = Dependency.resolve(OfflinePostProvider.self)
     private lazy var onlineProvider = Dependency.resolve(OnlinePostProvider.self)
     private var lastPost: Post?
@@ -30,6 +31,11 @@ public class DefaultPostProvider: PostProvider {
             .store(in: &disposeBag)
     }
 
+    public func refresh() {
+        lastPost = nil
+        fetchOnlinePosts()
+    }
+
     public func loadMore() {
         if !offlineProviderStarted {
             offlineProvider.start()
@@ -39,13 +45,24 @@ public class DefaultPostProvider: PostProvider {
         }
     }
 
+    public func updatePosts(posts: [Post]) -> AnyPublisher<Void, Never> {
+        offlineProvider.updatePosts(posts: posts)
+    }
+
     private func fetchOnlinePosts() {
+        networkActivityPublisher.send(true)
+        let createPostAsRecent = lastPost == nil
         onlineProvider
             .fetchPosts(afterPost: lastPost)
             .flatMap { [weak self] posts in
-                self?.offlineProvider.createPosts(posts: posts) ?? Just(()).eraseToAnyPublisher()
+                self?.offlineProvider.createPosts(posts: posts, isRecent: createPostAsRecent) ?? Just(()).eraseToAnyPublisher()
             }
-            .sink(receiveCompletion: { _ in }, receiveValue: { _ in })
+            .sink(
+                receiveCompletion: { [weak self] _ in
+                    self?.networkActivityPublisher.send(false)
+                },
+                receiveValue: { _ in }
+            )
             .store(in: &disposeBag)
     }
 }

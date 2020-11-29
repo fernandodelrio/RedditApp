@@ -10,5 +10,8 @@ import Foundation
 
 public protocol PostProvider {
     func loadMore()
+    func refresh()
     var postPublisher: PassthroughSubject<[Post], Never> { get }
+    var networkActivityPublisher: PassthroughSubject<Bool, Never> { get }
+    func updatePosts(posts: [Post]) -> AnyPublisher<Void, Never>
 }

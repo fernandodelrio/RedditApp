@@ -11,5 +11,6 @@ import Foundation
 public protocol OfflinePostProvider {
     var postPublisher: PassthroughSubject<[Post], Never> { get }
     func start()
-    func createPosts(posts: [Post]) -> AnyPublisher<Void, Never>
+    func createPosts(posts: [Post], isRecent: Bool) -> AnyPublisher<Void, Never>
+    func updatePosts(posts: [Post]) -> AnyPublisher<Void, Never>
 }

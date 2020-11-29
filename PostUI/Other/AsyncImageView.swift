@@ -27,7 +27,6 @@ public class AsyncImageView: UIView {
     }
 
     public func loadImage(_ url: URL?) {
-        imageView.image = nil
         showLoading()
         viewModel
             .loadImage(url)
@@ -39,7 +38,7 @@ public class AsyncImageView: UIView {
             .store(in: &disposeBag)
     }
 
-    func setupShadow() {
+    private func setupShadow() {
         layer.shadowColor = UIColor.gray.cgColor
         layer.shadowOffset = CGSize(width: 3.0, height: 3.0)
         layer.shadowRadius = 3.0
@@ -47,7 +46,7 @@ public class AsyncImageView: UIView {
         clipsToBounds = false
     }
 
-    func setupImageViewConstraints() {
+    private func setupImageViewConstraints() {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
         imageView.topAnchor.constraint(equalTo: topAnchor).isActive = true

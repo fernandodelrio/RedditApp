@@ -11,7 +11,7 @@ import Foundation
 extension Post {
     init(entity: PostEntity) {
         self.init()
-        identifier = entity.identifier ?? UUID()
+        identifier = entity.identifier ?? ""
         title = entity.title ?? ""
         author = entity.author ?? ""
         entryDate = entity.entryDate ?? Date()
@@ -19,6 +19,7 @@ extension Post {
         thumbnailURL = entity.thumbnailURL ?? ""
         isUnread = entity.isUnread
         numberOfComments = Int(entity.numberOfComments)
-        redditUUID = entity.redditUUID ?? ""
+        isDismissed = entity.isDismissed
+        order = Int(entity.order)
     }
 }

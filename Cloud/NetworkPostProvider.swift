@@ -18,7 +18,7 @@ public class NetworkPostProvider: OnlinePostProvider {
         if let afterPost = afterPost {
             requestPublisher = requestProvider.request(
                 endpoint: .retrieveTopPostsAfterSpecificPost,
-                with: afterPost.redditUUID
+                with: afterPost.identifier
             )
         } else {
             requestPublisher = requestProvider.request(

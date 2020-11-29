@@ -12,6 +12,10 @@ import Foundation
 extension PostEntity {
     convenience init(post: Post, context: NSManagedObjectContext) {
         self.init(context: context)
+        update(with: post)
+    }
+
+    func update(with post: Post) {
         identifier = post.identifier
         title = post.title
         author = post.author
@@ -20,6 +24,7 @@ extension PostEntity {
         thumbnailURL = post.thumbnailURL
         isUnread = post.isUnread
         numberOfComments = Int32(post.numberOfComments)
-        redditUUID = post.redditUUID
+        isDismissed = post.isDismissed
+        order = Int32(post.order)
     }
 }
