@@ -11,11 +11,17 @@ import Foundation
 
 class PostDetailsViewModel: ObservableObject {
     var post: Post?
-    @Published var image = ""
+    @Published var author = ""
+    @Published var imageURL = ""
     @Published var title = ""
 
     func load() {
-        image = post?.thumbnailURL ?? ""
-        title = post?.title ?? ""
+        if let post = post {
+            author = post.author
+            title = post.title
+            if let url = post.thumbnailURL {
+                imageURL = url
+            }
+        }
     }
 }

@@ -41,7 +41,7 @@
 		A04516F2D068E83B82A368BE /* PostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521CCCFF4C0875A5523F73C4 /* PostProvider.swift */; };
 		A6B555BF5EB0887730D97C75 /* PlistEndpointProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C674567CF262C13271629416 /* PlistEndpointProvider.swift */; };
 		A796D8BE1AB3B16EE9310E08 /* PostUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0C4B816FFFA512E5FC321514 /* PostUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AD7BBB556C52C4F48CF2A72B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DB45271D41817E961D3524 /* Main.storyboard */; };
+		AD7BBB556C52C4F48CF2A72B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59DB45271D41817E961D3524 /* Main_iPhone.storyboard */; };
 		B90C95ADADB1CD7EB9310721 /* Post+Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23206AC00FDAE3819819191F /* Post+Mapping.swift */; };
 		BBDE2FC05E8CE283DDF7C044 /* Dependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7400AFDAE212FC2E00F0D32 /* Dependency.swift */; };
 		BCCAEDBAC3A7EEF3754CF208 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409A79CBF53C5DA33128E04E /* CoreDataManager.swift */; };
@@ -52,6 +52,7 @@
 		CB9569A7CCDAD7504F4F0358 /* TestInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966269177977A28051226AD /* TestInjector.swift */; };
 		D81F72AB2574340F00BCB7B1 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F72AA2574340F00BCB7B1 /* PostDetailViewController.swift */; };
 		D81F72B22574343200BCB7B1 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F72B12574343200BCB7B1 /* PostDetailViewModel.swift */; };
+		D81F72B925743A1100BCB7B1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81F72B825743A1100BCB7B1 /* Main_iPad.storyboard */; };
 		D8888BDF25732042000B0666 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8888BDE25732042000B0666 /* PostResult.swift */; };
 		D8888BEC257322D5000B0666 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8888BEB257322D5000B0666 /* PostListViewModel.swift */; };
 		D8F8AB0625732721007253B9 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8AB0525732721007253B9 /* PostListCell.swift */; };
@@ -208,7 +209,7 @@
 /* Begin PBXFileReference section */
 		016FB4D955056FD1119914B7 /* Database.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Database.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02AD6865097A244A92DA958A /* Injector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injector.swift; sourceTree = "<group>"; };
-		031B7DFB9212801A287DFC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		031B7DFB9212801A287DFC58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		0409EFF8C247D5841A1366B9 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		0681DEF840320867000DC3C3 /* PostChild.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostChild.swift; sourceTree = "<group>"; };
 		0C4B816FFFA512E5FC321514 /* PostUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PostUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +252,7 @@
 		CEA612BAB3FF9F9B20F7654B /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		D81F72AA2574340F00BCB7B1 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		D81F72B12574343200BCB7B1 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
+		D81F72B825743A1100BCB7B1 /* Main_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		D8888BDE25732042000B0666 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
 		D8888BEB257322D5000B0666 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		D8F8AB0525732721007253B9 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
@@ -424,9 +426,10 @@
 				02AD6865097A244A92DA958A /* Injector.swift */,
 				1F645E8C689EE16A9D13A36A /* LaunchScreen.storyboard */,
 				1E0CC43BC51574BE55DFF56D /* Localizable.strings */,
-				59DB45271D41817E961D3524 /* Main.storyboard */,
+				59DB45271D41817E961D3524 /* Main_iPhone.storyboard */,
 				1C5CA12E1EF83FEB16B6AF02 /* main.swift */,
 				D8F8AB1B25733CDF007253B9 /* Localizable.stringsdict */,
+				D81F72B825743A1100BCB7B1 /* Main_iPad.storyboard */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -709,8 +712,9 @@
 				DD24866E8B408E2CD766DCFB /* Assets.xcassets in Resources */,
 				6CFD3F34E6030594916D2806 /* LaunchScreen.storyboard in Resources */,
 				6E729FD66B45C003BEB270A5 /* Localizable.strings in Resources */,
+				D81F72B925743A1100BCB7B1 /* Main_iPad.storyboard in Resources */,
 				D8F8AB1925733CDF007253B9 /* Localizable.stringsdict in Resources */,
-				AD7BBB556C52C4F48CF2A72B /* Main.storyboard in Resources */,
+				AD7BBB556C52C4F48CF2A72B /* Main_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,12 +899,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		59DB45271D41817E961D3524 /* Main.storyboard */ = {
+		59DB45271D41817E961D3524 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				031B7DFB9212801A287DFC58 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
 		D8F8AB1B25733CDF007253B9 /* Localizable.stringsdict */ = {

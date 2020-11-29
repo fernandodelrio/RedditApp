@@ -133,6 +133,18 @@ extension PostListViewController: UITableViewDelegate {
         tableView.beginUpdates()
         tableView.reloadRows(at: [indexPath], with: .automatic)
         tableView.endUpdates()
-        performSegue(withIdentifier: "postListToDetailSegue", sender: indexPath)
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            performSegue(withIdentifier: "postListToDetailSegue", sender: indexPath)
+        } else {
+            displayDetailOnIpad(index: indexPath.row)
+        }
+    }
+
+    private func displayDetailOnIpad(index: Int) {
+        let viewController = storyboard?.instantiateViewController(identifier: "PostDetailViewController")
+        if let destination = viewController as? PostDetailViewController {
+            destination.viewModel.post = viewModel.posts[index]
+            splitViewController?.showDetailViewController(destination, sender: self)
+        }
     }
 }
