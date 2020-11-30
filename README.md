@@ -108,3 +108,39 @@ https://drive.google.com/file/d/1dKyHpq-Ltdlh1HFbUoAyQs35lAW8qDjr/view?usp=shari
 
 iPad:
 https://drive.google.com/file/d/1tLibB5_v86CSMsNgeE8O7cHh6cPxt3dl/view?usp=sharing
+
+### iPhone post list
+Light mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPhone-List-LightMode.png" width="300" />
+
+Dark mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPhone-List-DarkMode.png" width="300" />
+
+### iPhone post detail
+Light mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPhone-Detail-LightMode.png" width="300" />
+
+Dark mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPhone-Detail-DarkMode.png" width="300" />
+
+### iPad post list and detail
+
+Light mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPad-LightMode.png" width="300" />
+
+Dark mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPad-DarkMode.png" width="300" />
+
+### iPhone image viewer
+Light mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPhone-ImageViewer-LightMode.png" width="300" />
+
+Dark mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPhone-ImageViewer-DarkMode.png" width="300" />
+
+### iPad image viewer
+Light mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPad-ImageViewer-LightMode.png" width="300" />
+
+Dark mode:
+<img src="https://github.com/fernandodelrio/RedditApp/blob/master/Demo/iPad-ImageViewer-DarkMode.png" width="300" />
