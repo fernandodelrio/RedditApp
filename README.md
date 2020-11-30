@@ -97,3 +97,12 @@ Because of the short time, I didn't wrote a full coverage of all classes in the 
 my main view models, demonstrating how to use this mocking mechanism:
 
 ![](https://github.com/fernandodelrio/RedditApp/blob/master/Code%20Coverage.png "Code Coverage")
+
+## Finally, the working app
+
+In this last section I will put a link for a video demonstrations of the app + a set of images of the app's user interface, I hope you enjoy. Feel free to get the project and run to check it yourself.
+
+### Demonstration videos
+
+https://drive.google.com/file/d/1tLibB5_v86CSMsNgeE8O7cHh6cPxt3dl/view?usp=sharing
+https://drive.google.com/file/d/1dKyHpq-Ltdlh1HFbUoAyQs35lAW8qDjr/view?usp=sharing
