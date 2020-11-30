@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 
+/// @mockable
 public protocol RequestProvider {
     func request(endpoint: Endpoint, with args: CVarArg...) -> AnyPublisher<Data, DataError>
     func request(url: URL) -> AnyPublisher<Data, DataError>

@@ -98,7 +98,8 @@ extension PostListViewController: UITableViewDataSource {
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostListCell") as? PostListCell
         let post = viewModel.posts[indexPath.row]
-        cell?.indicatorView?.layer.opacity = post.isUnread ? 1 : 0
+
+        cell?.indicatorView?.isHidden = !post.isUnread
         cell?.authorLabel?.text = post.author
         cell?.timeLabel?.text = post.relativeEntryDateText
         cell?.titleLabel?.text = post.title

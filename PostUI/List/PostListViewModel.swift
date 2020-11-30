@@ -16,9 +16,9 @@ class PostListViewModel {
         case showBottomLoading
         case hideLoading
     }
-    private lazy var postProvider = Dependency.resolve(PostProvider.self)
     private var disposeBag = Set<AnyCancellable>()
-    private var unfilteredPosts: [Post] = []
+    lazy var postProvider = Dependency.resolve(PostProvider.self)
+    var unfilteredPosts: [Post] = []
     var isRefreshingData = false
     var isInitialLoading = true
     var reloadPublisher = PassthroughSubject<Void, Never>()
@@ -66,7 +66,7 @@ class PostListViewModel {
         unfilteredPosts[unfilteredIndex].isDismissed = true
         updatePosts()
         postProvider
-            .updatePosts(posts: [post])
+            .updatePosts(posts: [unfilteredPosts[unfilteredIndex]])
             .sink { _ in }
             .store(in: &disposeBag)
     }
@@ -87,7 +87,7 @@ class PostListViewModel {
         unfilteredPosts[unfilteredIndex].isUnread = false
         updatePosts()
         postProvider
-            .updatePosts(posts: [post])
+            .updatePosts(posts: [unfilteredPosts[unfilteredIndex]])
             .sink { _ in }
             .store(in: &disposeBag)
     }

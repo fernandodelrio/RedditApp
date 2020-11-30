@@ -25,6 +25,8 @@ class PostListCell: UITableViewCell {
     }
 
     private func setupView() {
+        indicatorView?.accessibilityIdentifier = "PostListCell.indicatorView"
+        indicatorView?.isAccessibilityElement = true
         indicatorView?.layer.cornerRadius = (indicatorSize?.constant ?? 0) / 2
         dismissButton?.setTitle(NSLocalizedString("Dismiss Post", comment: ""), for: .normal)
         backgroundColor = .mainBackgroundColor

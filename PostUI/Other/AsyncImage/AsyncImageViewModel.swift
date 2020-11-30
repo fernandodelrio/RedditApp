@@ -11,7 +11,7 @@ import UIKit
 
 class AsyncImageViewModel {
     lazy var imageCacheProvider = Dependency.resolve(ImageCacheProvider.self)
-    private lazy var requestProvider = Dependency.resolve(RequestProvider.self)
+    lazy var requestProvider = Dependency.resolve(RequestProvider.self)
     private var disposeBag = Set<AnyCancellable>()
 
     func loadImage(_ url: URL?) -> AnyPublisher<UIImage?, Never> {

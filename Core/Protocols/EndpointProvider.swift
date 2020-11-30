@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// @mockable
 public protocol EndpointProvider {
     func url(for endpoint: Endpoint, with args: [CVarArg]) -> URL?
 }

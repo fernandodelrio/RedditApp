@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 
+/// @mockable
 public protocol OnlinePostProvider {
     func fetchPosts(afterPost: Post?) -> AnyPublisher<[Post], DataError>
 }

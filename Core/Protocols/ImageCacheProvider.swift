@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// @mockable
 public protocol ImageCacheProvider {
     func save(_ image: UIImage, for url: URL)
     func retrieve(_ url: URL) -> UIImage?
