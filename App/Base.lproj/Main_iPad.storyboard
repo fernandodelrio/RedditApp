@@ -225,26 +225,43 @@
             <objects>
                 <viewController id="bvX-6B-Lqi" customClass="ImageViewerViewController" customModule="PostUI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="53o-UJ-rSC">
-                        <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="704" height="995"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VoC-ZP-QmP" customClass="AsyncImageView" customModule="PostUI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6VW-6p-VnQ">
                                 <rect key="frame" x="0.0" y="0.0" width="704" height="995.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <gestureRecognizers/>
-                            </view>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cLm-Bn-3tg" customClass="AsyncImageView" customModule="PostUI">
+                                        <rect key="frame" x="0.0" y="0.0" width="704" height="949.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBi-ON-K41">
+                                        <rect key="frame" x="0.0" y="949.5" width="704" height="46"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="NjV-dx-66s"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapSaveButtton" destination="bvX-6B-Lqi" eventType="touchUpInside" id="odS-GA-0nE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aDQ-XT-If0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aDQ-XT-If0" firstAttribute="trailing" secondItem="VoC-ZP-QmP" secondAttribute="trailing" id="0OB-mx-xlM"/>
-                            <constraint firstItem="VoC-ZP-QmP" firstAttribute="leading" secondItem="aDQ-XT-If0" secondAttribute="leading" id="6ZO-Fa-qid"/>
-                            <constraint firstItem="VoC-ZP-QmP" firstAttribute="top" secondItem="aDQ-XT-If0" secondAttribute="top" id="7Qf-fV-ho3"/>
-                            <constraint firstItem="aDQ-XT-If0" firstAttribute="bottom" secondItem="VoC-ZP-QmP" secondAttribute="bottom" id="gth-7F-EDD"/>
+                            <constraint firstItem="aDQ-XT-If0" firstAttribute="bottom" secondItem="6VW-6p-VnQ" secondAttribute="bottom" id="Lch-WX-kRC"/>
+                            <constraint firstItem="aDQ-XT-If0" firstAttribute="trailing" secondItem="6VW-6p-VnQ" secondAttribute="trailing" id="SCx-Sj-Pk8"/>
+                            <constraint firstItem="6VW-6p-VnQ" firstAttribute="leading" secondItem="aDQ-XT-If0" secondAttribute="leading" id="Xa2-E3-hUX"/>
+                            <constraint firstItem="6VW-6p-VnQ" firstAttribute="top" secondItem="aDQ-XT-If0" secondAttribute="top" id="koz-IR-vAo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="asyncImageView" destination="VoC-ZP-QmP" id="wcJ-Jg-eCL"/>
+                        <outlet property="asyncImageView" destination="cLm-Bn-3tg" id="MNW-hr-hAR"/>
+                        <outlet property="saveButton" destination="RBi-ON-K41" id="0yc-iB-VtH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmL-JN-zSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
