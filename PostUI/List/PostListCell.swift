@@ -32,7 +32,7 @@ class PostListCell: UITableViewCell {
         authorLabel?.textColor = .mainTextColor
         timeLabel?.textColor = .mainTextColor
         titleLabel?.textColor = .mainTextColor
-        dismissButton?.setTitleColor(.mainTextColor, for: .normal)
+        dismissButton?.setTitleColor(.mainColor, for: .normal)
         dismissButton?.tintColor = .mainColor
         commentsLabel?.textColor = .mainColor
     }

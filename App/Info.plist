@@ -24,5 +24,7 @@
 	<string>Main_iPhone</string>
     <key>UIMainStoryboardFile~ipad</key>
     <string>Main_iPad</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>Please allow access to save photo in your photo library.</string>
 </dict>
 </plist>

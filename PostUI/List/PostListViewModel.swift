@@ -29,6 +29,7 @@ class PostListViewModel {
         postProvider
             .postPublisher
             .sink { [weak self] posts in
+                self?.isInitialLoading = false
                 self?.unfilteredPosts.append(contentsOf: posts)
                 self?.updatePosts()
                 self?.reloadPublisher.send()

@@ -10,7 +10,7 @@ import Core
 import UIKit
 
 class AsyncImageViewModel {
-    private lazy var imageCacheProvider = Dependency.resolve(ImageCacheProvider.self)
+    lazy var imageCacheProvider = Dependency.resolve(ImageCacheProvider.self)
     private lazy var requestProvider = Dependency.resolve(RequestProvider.self)
     private var disposeBag = Set<AnyCancellable>()
 
@@ -23,7 +23,13 @@ class AsyncImageViewModel {
         } else {
             return requestProvider
                 .request(url: url)
-                .map { UIImage(data: $0) }
+                .map { [weak self] data -> UIImage? in
+                    let image = UIImage(data: data)
+                    if let cacheImage = image {
+                        self?.imageCacheProvider.save(cacheImage, for: url)
+                    }
+                    return image
+                }
                 .catch { _ in Just(nil).eraseToAnyPublisher() }
                 .eraseToAnyPublisher()
         }

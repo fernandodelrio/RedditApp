@@ -1,0 +1,6 @@
+/* 
+  InfoPlist.strings
+  RedditApp
+  Created by Fernando Henrique Bonfim Moreno Del Rio on 11/29/20.
+*/
+"NSPhotoLibraryAddUsageDescription" = "Please allow access to save photo in your photo library";

@@ -281,23 +281,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5k-ea-3wX" customClass="AsyncImageView" customModule="PostUI">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l27-MV-Xf0">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S5k-ea-3wX" customClass="AsyncImageView" customModule="PostUI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="762"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRj-re-uKe">
+                                        <rect key="frame" x="0.0" y="762" width="414" height="46"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="ZOI-NP-3XJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="didTapSaveButtton" destination="fIe-lx-Mgn" eventType="touchUpInside" id="9Za-eh-89z"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r26-jn-xEd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="S5k-ea-3wX" firstAttribute="leading" secondItem="r26-jn-xEd" secondAttribute="leading" id="0s3-RO-iBx"/>
-                            <constraint firstItem="S5k-ea-3wX" firstAttribute="top" secondItem="r26-jn-xEd" secondAttribute="top" id="D5A-kb-2Xh"/>
-                            <constraint firstItem="r26-jn-xEd" firstAttribute="bottom" secondItem="S5k-ea-3wX" secondAttribute="bottom" id="Ep4-3u-zCg"/>
-                            <constraint firstItem="r26-jn-xEd" firstAttribute="trailing" secondItem="S5k-ea-3wX" secondAttribute="trailing" id="b8L-3P-lQl"/>
+                            <constraint firstItem="r26-jn-xEd" firstAttribute="trailing" secondItem="l27-MV-Xf0" secondAttribute="trailing" id="0dX-VJ-GPb"/>
+                            <constraint firstItem="r26-jn-xEd" firstAttribute="bottom" secondItem="l27-MV-Xf0" secondAttribute="bottom" id="4xW-A9-zAT"/>
+                            <constraint firstItem="l27-MV-Xf0" firstAttribute="top" secondItem="r26-jn-xEd" secondAttribute="top" id="87W-MQ-BjS"/>
+                            <constraint firstItem="l27-MV-Xf0" firstAttribute="leading" secondItem="r26-jn-xEd" secondAttribute="leading" id="tgB-f4-OK3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2E1-af-6Hr"/>
                     <connections>
                         <outlet property="asyncImageView" destination="S5k-ea-3wX" id="uzP-Q3-Nmw"/>
+                        <outlet property="saveButton" destination="QRj-re-uKe" id="1Fx-hc-N8C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uq0-AA-9zJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

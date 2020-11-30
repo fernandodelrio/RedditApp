@@ -26,7 +26,6 @@
 		6CFD3F34E6030594916D2806 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F645E8C689EE16A9D13A36A /* LaunchScreen.storyboard */; };
 		6DD0DBF3F4280EA01A1D06AA /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2A763F978A8641C760510D35 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6E27D4F2DD9BB1AD49C14B45 /* PostChild.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0681DEF840320867000DC3C3 /* PostChild.swift */; };
-		6E729FD66B45C003BEB270A5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E0CC43BC51574BE55DFF56D /* Localizable.strings */; };
 		74F6EB7E6BC3E747ACF6737D /* NetworkPostProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82ED11946946EEB48D623E88 /* NetworkPostProvider.swift */; };
 		7621AEB6B12A665562376941 /* Cloud.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F392963441576B91A23E270 /* Cloud.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7E15193E81D165D5C42A218D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82952D8DB9A49EDCB5748D44 /* CoreData.framework */; };
@@ -52,12 +51,14 @@
 		CB9569A7CCDAD7504F4F0358 /* TestInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E966269177977A28051226AD /* TestInjector.swift */; };
 		D81F72AB2574340F00BCB7B1 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F72AA2574340F00BCB7B1 /* PostDetailViewController.swift */; };
 		D81F72B22574343200BCB7B1 /* PostDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F72B12574343200BCB7B1 /* PostDetailViewModel.swift */; };
-		D81F72B925743A1100BCB7B1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D81F72B825743A1100BCB7B1 /* Main_iPad.storyboard */; };
 		D81F73022574514100BCB7B1 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D81F73012574514100BCB7B1 /* ImageViewerViewController.swift */; };
 		D8888BDF25732042000B0666 /* PostResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8888BDE25732042000B0666 /* PostResult.swift */; };
 		D8888BEC257322D5000B0666 /* PostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8888BEB257322D5000B0666 /* PostListViewModel.swift */; };
 		D8DB8CEE2574528D0015AD57 /* ImageViewerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DB8CED2574528D0015AD57 /* ImageViewerViewModel.swift */; };
 		D8DB8CF625745AD00015AD57 /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8DB8CF525745AD00015AD57 /* UIColor+Theme.swift */; };
+		D8DB8D08257466650015AD57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8DB8D0A257466650015AD57 /* InfoPlist.strings */; };
+		D8DB8D102574666C0015AD57 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D8DB8D122574666C0015AD57 /* Localizable.strings */; };
+		D8DB8D132574667E0015AD57 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8DB8D152574667E0015AD57 /* Main_iPad.storyboard */; };
 		D8F8AB0625732721007253B9 /* PostListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8AB0525732721007253B9 /* PostListCell.swift */; };
 		D8F8AB1925733CDF007253B9 /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = D8F8AB1B25733CDF007253B9 /* Localizable.stringsdict */; };
 		D8F8AB2225733F40007253B9 /* ImageCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F8AB2125733F40007253B9 /* ImageCacheProvider.swift */; };
@@ -222,7 +223,6 @@
 		147298FB2652F86F399E3A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		164735C6D619AD458622E1F5 /* Endpoints.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Endpoints.plist; sourceTree = "<group>"; };
 		1C5CA12E1EF83FEB16B6AF02 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		1E0CC43BC51574BE55DFF56D /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Localizable.strings; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F392963441576B91A23E270 /* Cloud.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cloud.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		23206AC00FDAE3819819191F /* Post+Mapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Post+Mapping.swift"; sourceTree = "<group>"; };
 		269E576B084F3B7DE07BC900 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -255,12 +255,14 @@
 		CEA612BAB3FF9F9B20F7654B /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
 		D81F72AA2574340F00BCB7B1 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		D81F72B12574343200BCB7B1 /* PostDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewModel.swift; sourceTree = "<group>"; };
-		D81F72B825743A1100BCB7B1 /* Main_iPad.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		D81F73012574514100BCB7B1 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
 		D8888BDE25732042000B0666 /* PostResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostResult.swift; sourceTree = "<group>"; };
 		D8888BEB257322D5000B0666 /* PostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewModel.swift; sourceTree = "<group>"; };
 		D8DB8CED2574528D0015AD57 /* ImageViewerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewerViewModel.swift; sourceTree = "<group>"; };
 		D8DB8CF525745AD00015AD57 /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		D8DB8D09257466650015AD57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D8DB8D112574666C0015AD57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D8DB8D142574667E0015AD57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		D8F8AB0525732721007253B9 /* PostListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListCell.swift; sourceTree = "<group>"; };
 		D8F8AB1A25733CDF007253B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		D8F8AB2125733F40007253B9 /* ImageCacheProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheProvider.swift; sourceTree = "<group>"; };
@@ -432,11 +434,12 @@
 				12A1C41AC0EDB6FBBDA4E900 /* Info.plist */,
 				02AD6865097A244A92DA958A /* Injector.swift */,
 				1F645E8C689EE16A9D13A36A /* LaunchScreen.storyboard */,
-				1E0CC43BC51574BE55DFF56D /* Localizable.strings */,
+				D8DB8D122574666C0015AD57 /* Localizable.strings */,
 				59DB45271D41817E961D3524 /* Main_iPhone.storyboard */,
 				1C5CA12E1EF83FEB16B6AF02 /* main.swift */,
 				D8F8AB1B25733CDF007253B9 /* Localizable.stringsdict */,
-				D81F72B825743A1100BCB7B1 /* Main_iPad.storyboard */,
+				D8DB8D152574667E0015AD57 /* Main_iPad.storyboard */,
+				D8DB8D0A257466650015AD57 /* InfoPlist.strings */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -743,9 +746,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD24866E8B408E2CD766DCFB /* Assets.xcassets in Resources */,
+				D8DB8D08257466650015AD57 /* InfoPlist.strings in Resources */,
 				6CFD3F34E6030594916D2806 /* LaunchScreen.storyboard in Resources */,
-				6E729FD66B45C003BEB270A5 /* Localizable.strings in Resources */,
-				D81F72B925743A1100BCB7B1 /* Main_iPad.storyboard in Resources */,
+				D8DB8D102574666C0015AD57 /* Localizable.strings in Resources */,
+				D8DB8D132574667E0015AD57 /* Main_iPad.storyboard in Resources */,
 				D8F8AB1925733CDF007253B9 /* Localizable.stringsdict in Resources */,
 				AD7BBB556C52C4F48CF2A72B /* Main_iPhone.storyboard in Resources */,
 			);
@@ -941,6 +945,31 @@
 				031B7DFB9212801A287DFC58 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		D8DB8D0A257466650015AD57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DB8D09257466650015AD57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D8DB8D122574666C0015AD57 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DB8D112574666C0015AD57 /* en */,
+			);
+			name = Localizable.strings;
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		D8DB8D152574667E0015AD57 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D8DB8D142574667E0015AD57 /* Base */,
+			);
+			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		D8F8AB1B25733CDF007253B9 /* Localizable.stringsdict */ = {

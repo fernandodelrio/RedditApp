@@ -66,6 +66,7 @@ public class PostListViewController: UIViewController {
             .sink { [weak self] _ in
                 let isDataAvailable = !(self?.viewModel.posts.isEmpty ?? true)
                 self?.dismissAllButton?.isHidden = !isDataAvailable
+                self?.tableView?.isHidden = !isDataAvailable
                 self?.tableView?.reloadData()
             }
             .store(in: &disposeBag)
